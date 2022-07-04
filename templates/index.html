@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>晨晨GRE测试</title>
+    <script src={{ url_for( "static", filename="js/jquery-3.1.1.js" ) }}></script>
+    <script src={{ url_for( "static", filename="js/index.js" ) }}></script>
+</head>
+<body>
+
+<div class="container" style="position: absolute; left:50px">
+    <h1>晨晨GRE测试</h1>
+    <div class="transfer">
+        <button class="btn" id="swap" onclick="rand_word()" style="font-size:20px">随机生成</button>
+        <button class="btn" id="upone" onclick="prior_word()" style="font-size:20px">上一个</button>
+        <button class="btn" id="nextone" onclick="next_word()" style="font-size:20px">下一个</button>
+        <button class="reset" id="reset" onclick="reset()" style="font-size:20px; position:absolute; right:0px; color:red;">重制</button> 
+    </div>
+    <p id="display">随机单词: </p>
+    <br>
+    <div class="showmean">
+        <button class="mean" id="meanshow" onclick="show()" style="font-size:20px">查看含义</button>
+        <button class="mean" id="meanunshow" onclick="unshow()" style="font-size:20px; position:absolute;right:0px;">隐藏</button>
+    </div>
+    <p id="meandisplay">单词意思: </p>
+    <p id="explaindisplay">单词解释: </p>
+    <br>
+    <div class="checktf">
+        <button class="check" id="right" onclick="addright()" style="font-size:20px">认识 +</button>
+        <button class="check" id="right2" onclick="delright()" style="font-size:20px">认识 -</button>
+        <button class="check" id="error" onclick="adderror()" style="font-size:20px">不认识 +</button>
+        <button class="check" id="error2" onclick="delerror()" style="font-size:20px">不认识 -</button>
+        <button class="check" id="unfamiliar" onclick="addunfamiliar()" style="font-size:20px">不熟悉 +</button>
+        <button class="check" id="unfamiliar2" onclick="delunfamiliar()" style="font-size:20px">不熟悉 -</button>
+        <p id="errorright">认识: 0, 不认识: 0, 不熟悉: 0</p>
+
+    </div>
+    <p id="errorwords">不认识单词: </p>
+    <p id="unfamiliarwords">不熟悉单词: </p>
+    <br>
+    <button class="cal" id="acc" onclick="calacc()" style="font-size:20px">正确率</button>
+    <p id="accuracy">正确率: 0</p>
+    <!-- <div class="clear">
+        <button class="clear" id="clear" onclick="clear()" style="font-size:20px">清除</button>        
+    </div> -->
+    <br><br><br><br>
+    
+</div>
+
+
+<script type="text/javascript">
+</script>
+</body>
+</html>
